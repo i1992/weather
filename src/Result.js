@@ -3,14 +3,20 @@ import React, { Component } from 'react';
 
 class Result extends Component {
 
-
-  render() {
-    return (
+    render() {
+      return(
         <div>
-          <div>{console.log(this.props.sdata)}</div>
+          {this.props.aaaa.map((re)=>{
+            <ul>
+              {re.date}
+            </ul>
+
+          })}
         </div>
-    )
-  }
+
+      )
+    }
+
 }
 
 export default Result;

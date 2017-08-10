@@ -20,7 +20,7 @@ class App extends Component {
 
 
   render() {
-    this.state.arry[0].map((re)=>{
+    this.state.arry.map((re)=>{
       console.log(re);
     })
     return (
