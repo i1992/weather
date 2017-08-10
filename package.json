@@ -4,8 +4,11 @@
   "private": true,
   "dependencies": {
     "form-serialize": "^0.7.2",
+
     "react": "^15.6.1",
+    
     "react-dom": "^15.6.1",
+    "react-flexbox-grid": "^1.1.4",
     "react-scripts": "1.0.10"
   },
   "scripts": {
