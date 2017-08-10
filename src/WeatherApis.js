@@ -7,6 +7,9 @@ const headers = {
 }
 
 export const get = (weathr) =>
-  fetch(`${api}${weathr.name}&format=json&date=${weathr.date}&enddate=${weathr.edate}`,{ headers })
+  fetch(`${api}${weathr.name}&format=json&date=${weathr.date}&enddate=${weathr.edate}`,{ headers } 
+
+  )
+
     .then(res => res.json())
     .then(dat => dat.data)

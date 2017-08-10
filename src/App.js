@@ -8,18 +8,21 @@ import './App.css';
 class App extends Component {
 
   state = {
-    weather : []
+    arry : []
   }
 
-  createapi(data) {
-        WeatherApis.get(data)
-          .then(( weather ) => {this.setState({ weather : weather})
+  createapi = (data) => {
+  WeatherApis.get(data).then((weathers) => {
+    this.setState({ arry : this.state.arry.concat(weathers) })
 
-        })
-      }
+  })
+}
 
 
   render() {
+    this.state.arry[0].map((re)=>{
+      console.log(re);
+    })
     return (
       <div className="App">
           <h2>Welcome to Weather Data</h2>
@@ -28,12 +31,7 @@ class App extends Component {
               this.createapi(data)
             }}
           />
-          <div>
-            {
-              console.log(this.state.weather)
 
-            }
-          </div>
         </div>
     );
   }
