@@ -2,10 +2,13 @@
   text-align: center;
 }
 
-.search-books-results {
+.main-results {
   padding: 80px 10px 20px;
 }
-.books-grid {
+.color {
+  color: #0f8263;
+}
+.grid {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -13,10 +16,10 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  color: red;
-  
+  color: #137fa0;
+
 }
-.books-grid li {
+.grid li {
   padding: 10px 15px;
   text-align: left;
 }

@@ -3,8 +3,9 @@ const api = "http://api.worldweatheronline.com/premium/v1/past-weather.ashx?key=
 
 const headers = {
   'Accept': 'application/json',
-
 }
+
+// GET Method
 
 export const get = (weathr) =>
   fetch(`${api}${weathr.name}&format=json&date=${weathr.date}&enddate=${weathr.edate}`,{
@@ -13,8 +14,5 @@ export const get = (weathr) =>
         ...headers,
       'Content-Type': 'application/json'
     },
-  }
-  )
-
-    .then(res => res.json())
+  }).then(res => res.json())
     .then(dat => dat.data.weather)

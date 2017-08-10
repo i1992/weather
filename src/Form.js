@@ -8,11 +8,10 @@ class Form extends Component {
   handleSubmit = (e) => {
       e.preventDefault()
       const value = serialzeForm(e.target, { hash : true })
+
       if (this.props.onCreateapi)
         this.props.onCreateapi(value)
     }
-
-
   render() {
     return (
           <form  onSubmit= {this.handleSubmit} className='create-contact-form'>
