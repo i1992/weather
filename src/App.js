@@ -6,15 +6,21 @@ import './App.css';
 class App extends Component {
   state = {
     arry : [],
-    model : []
+    goo : []
   }
 
   //To get Weather data using API
 
   createapi = (data) => {
-    var joined = this.state.model.concat(data);
-    this.setState({ model: joined })
+
+    if (data){
+      this.setState({goo : []})
+      var joined = this.state.goo.concat(data);
+      this.setState({ goo: joined })
+    }
+
     WeatherApis.get(data).then((weathers) => {
+        this.setState({ arry: [] })
       this.setState({ arry : this.state.arry.concat(weathers) })
     })
 }
@@ -29,10 +35,11 @@ class App extends Component {
           }}/>
 
           <div className="main-results">
-            {this.state.model.map((city_n, i)=>{
+            {this.state.goo.map((city_n, i)=>{
               return(
               <div className="color" key={i}>City: {city_n.name.toUpperCase()}</div>
-            )})}
+            )
+          })}
 
             <ol className="grid">
               {this.state.arry.map((result ,i)=>{

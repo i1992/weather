@@ -1,5 +1,5 @@
 
-const api = "http://api.worldweatheronline.com/premium/v1/past-weather.ashx?key=5205b47951e64997ab615331170708&q=";
+const api = "https://api.worldweatheronline.com/premium/v1/past-weather.ashx?key=5205b47951e64997ab615331170708&q=";
 
 const headers = {
   'Accept': 'application/json',
